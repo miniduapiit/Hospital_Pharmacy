@@ -1,0 +1,213 @@
+/* General Styling */
+body {
+    background: url(../Images/main-image.jpg) no-repeat center center fixed;
+    background-size: cover; /* Ensure the image covers the entire viewport */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Header Styling */
+header {
+    background-color: #070068; /* Teal */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+header nav ul li a.active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+/* Section Styling */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #070068;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Medicine Categories */
+.medicine-category {
+    margin-bottom: 20px;
+}
+
+.medicine-category .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px; /* Add gap between label, input, and button */
+}
+
+.medicine-category .item label {
+    font-size: 1.1rem;
+    color: #333;
+    flex: 1; /* Allow the label to take up available space */
+}
+
+.medicine-category .item input {
+    width: 70px; /* Adjust width to be more consistent */
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center; /* Center the number input text */
+}
+
+.medicine-category .item button {
+    padding: 5px 15px;
+    background-color: #070068;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.medicine-category .item button:hover {
+    background-color: #6672fa;
+}
+
+.medicine-img {
+    width: 50px; /* Adjust the size of the images */
+    height: 50px;
+    object-fit: cover;
+    margin-right: 15px; /* Space between the image and text */
+}
+
+
+/* Order Table */
+#order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#order-table th,
+#order-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+#order-table th {
+    background-color: #e0f2f1; /* Light Teal */
+    color: #00384d;
+    font-weight: bold;
+}
+
+/* Order Summary */
+#total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #b71c1c; /* Red */
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #070068;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #6672fa;
+}
+
+/* Footer */
+footer {
+    background-color: #070068;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #order-table th,
+    #order-table td {
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item input {
+        width: 100%; /* Make input fill the available width */
+        margin-bottom: 10px;
+    }
+
+    .medicine-category .item button {
+        width: 100%; /* Button takes full width */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
