@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Order</title>
+    <link rel="stylesheet" href="./Css/index.css">
+</head>
+<body>
+    <header>
+        <h1>Hospital Pharmacy</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pharmacy.html" class="active">Pharmacy</a></li>
+                <li><a href="reservation.html">Consultation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Analgesics Section -->
+        <section>
+            <h2>Analgesics</h2>
+            <div class="medicine-category">
+                <div class="item">
+                    <label for="paracetamol-quantity">Paracetamol (1.00$ per unit)</label>
+                    <input type="number" id="paracetamol-quantity" min="0" value="0">
+                    <button onclick="addItem('Paracetamol', 'Analgesics')">Add</button>
+                </div>
+                <div class="item">
+                    <label for="aspirin-quantity">Aspirin (1.50$ per unit)</label>
+                    <input type="number" id="aspirin-quantity" min="0" value="0">
+                    <button onclick="addItem('Aspirin', 'Analgesics')">Add</button>
+                </div>
+                <div class="item">
+                    <label for="ibuprofen-quantity">Ibuprofen (1.20$ per unit)</label>
+                    <input type="number" id="ibuprofen-quantity" min="0" value="0">
+                    <button onclick="addItem('Ibuprofen', 'Analgesics')">Add</button>
+                </div>
+                <div class="item">
+                    <label for="diclofenac-quantity">Diclofenac (1.80$ per unit)</label>
+                    <input type="number" id="diclofenac-quantity" min="0" value="0">
+                    <button onclick="addItem('Diclofenac', 'Analgesics')">Add</button>
+                </div>
+                <div class="item">
+                    <label for="codeine-quantity">Codeine (2.00$ per unit)</label>
+                    <input type="number" id="codeine-quantity" min="0" value="0">
+                    <button onclick="addItem('Codeine', 'Analgesics')">Add</button>
+                </div>
+                <div class="item">
+                    <label for="tramadol-quantity">Tramadol (2.50$ per unit)</label>
+                    <input type="number" id="tramadol-quantity" min="0" value="0">
+                    <button onclick="addItem('Tramadol', 'Analgesics')">Add</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Antibiotics Section -->
+        <section>
+            <h2>Antibiotics</h2>
+            <div class="medicine-category">
+                <div class="item">
+                    <label for="amoxicillin-quantity">Amoxicillin (2.00$ per unit)</label>
+                    <input type="number" id="amoxicillin-quantity" min="0" value="0">
+                    <button onclick="addItem('Amoxicillin', 'Antibiotics')">Add</button>
+                </div>
+                <div class="item">
+                    <label for="doxycycline-quantity">Doxycycline (2.50$ per unit)</label>
+                    <input type="number" id="doxycycline-quantity" min="0" value="0">
+                    <button onclick="addItem('Doxycycline', 'Antibiotics')">Add</button>
+                </div>
+                <div class="item">
+                    <label for="ciprofloxacin-quantity">Ciprofloxacin (3.00$ per unit)</label>
+                    <input type="number" id="ciprofloxacin-quantity" min="0" value="0">
+                    <button onclick="addItem('Ciprofloxacin', 'Antibiotics')">Add</button>
+                </div>
+                <div class="item">
+                    <label for="clarithromycin-quantity">Clarithromycin (2.80$ per unit)</label>
+                    <input type="number" id="clarithromycin-quantity" min="0" value="0">
+                    <button onclick="addItem('Clarithromycin', 'Antibiotics')">Add</button>
+                </div>
+                <div class="item">
+                    <label for="erythromycin-quantity">Erythromycin (2.50$ per unit)</label>
+                    <input type="number" id="erythromycin-quantity" min="0" value="0">
+                    <button onclick="addItem('Erythromycin', 'Antibiotics')">Add</button>
+                </div>
+                <div class="item">
+                    <label for="metronidazole-quantity">Metronidazole (1.90$ per unit)</label>
+                    <input type="number" id="metronidazole-quantity" min="0" value="0">
+                    <button onclick="addItem('Metronidazole', 'Antibiotics')">Add</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Antidepressants Section -->
+        <section>
+            <h2>Antidepressants</h2>
+            <div class="medicine-category">
+                <div class="item">
+                    <label for="fluoxetine-quantity">Fluoxetine (1.75$ per unit)</label>
+                    <input type="number" id="fluoxetine-quantity" min="0" value="0">
+                    <button onclick="addItem('Fluoxetine', 'Antidepressants')">Add</button>
+                </div>
+                <div class="item">
+                    <label for="sertraline-quantity">Sertraline (2.20$ per unit)</label>
+                    <input type="number" id="sertraline-quantity" min="0" value="0">
+                    <button onclick="addItem('Sertraline', 'Antidepressants')">Add</button>
+                </div>
+                <div class="item">
+                    <label for="escitalopram-quantity">Escitalopram (2.50$ per unit)</label>
+                    <input type="number" id="escitalopram-quantity" min="0" value="0">
+                    <button onclick="addItem('Escitalopram', 'Antidepressants')">Add</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Summary Section -->
+        <section>
+            <h2>Order Summary</h2>
+            <table id="order-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Order items will be dynamically added here -->
+                </tbody>
+            </table>
+            <p>Total: <span id="total-price">$0.00</span></p>
+            <button onclick="addToFavourites()">Add to Favourites</button>
+            <button onclick="applyFavourites()">Apply Favourites</button>
+            <button onclick="buyNow()">Buy Now</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hospital Pharmacy. All rights reserved.</p>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+</html>
